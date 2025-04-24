@@ -1,5 +1,5 @@
 def insertion(lista: list[int], indice: int,) -> list[int]:
-    for i in range (indice, 1, - 1): # troca o 1 por 0
+    for i in range (indice, 0, - 1):
         if lista[i] < lista[i-1]:
             aux = lista[i]
             lista[i] = lista[i-1]
@@ -10,7 +10,7 @@ def insertion(lista: list[int], indice: int,) -> list[int]:
     return lista
 
 def insertion_sort(lista: list[int]) -> list[int]:
-    for i in range (1, len(lista) -1, 1): # tira o "-1"
+    for i in range (1, len(lista), 1):
         lista = insertion(lista, i)
             
     return lista
