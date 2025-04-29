@@ -1,4 +1,19 @@
 import random
+import math
+
+def shell_sort(lista:list[int]) -> list[int]:
+    n = len(lista)
+    gap = math.ceil(n/2)
+    while gap > 0:
+        for i in range (gap, n):
+            if lista[i] < lista[i-gap]:
+                aux = lista[i]
+                lista[i] = lista[i-gap]
+                lista[i-gap] = aux
+        gap -= 1
+            
+    return lista
+
 
 def insertion(lista: list[int], indice: int,) -> list[int]:
     for i in range (indice, 0, - 1):
@@ -17,37 +32,9 @@ def insertion_sort(lista: list[int]) -> list[int]:
             
     return lista
 
-def gapInsertionSort(alist,start,gap):
-    for i in range(start+gap,len(alist),gap):
-
-        currentvalue = alist[i]
-        position = i
-
-        while position>=gap and alist[position-gap]>currentvalue:
-            alist[position]=alist[position-gap]
-            position = position-gap
-
-        alist[position]=currentvalue
-
-def shellSort(alist):
-    sublistcount = len(alist)//2
-    while sublistcount > 0:
-
-      for startposition in range(sublistcount):
-        gapInsertionSort(alist,startposition,sublistcount)
-
-      print("After increments of size",sublistcount,
-                                   "The list is",alist)
-
-      sublistcount = sublistcount // 2
 
 
 numeros = [random.randint(1, 10000) for _ in range(10000)]
 
-shellSort(numeros)
+shell_sort(numeros)
 print(numeros)
-
-numeros = [random.randint(1, 10000) for _ in range(10000)]
-
-listaOrdenada = insertion_sort(numeros)
-print(f"Lista ordenada: {listaOrdenada}")
