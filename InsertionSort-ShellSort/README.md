@@ -6,33 +6,28 @@ A chave do algoritmo está justamente na forma como esses **gaps** são escolhid
 A seguinte chamada da função `shellSort` mostra as listas parcialmente ordenadas depois de cada incremento, com a ordenação final sendo uma ordenação por inserção com incremento de um.
 
 ```python
-def shellSort(alist):
-    sublistcount = len(alist)//2
-    while sublistcount > 0:
+def shell_sort(lista: list[int]) -> list[int]:
+    n = len(lista)
+    gap = n // 2
 
-      for startposition in range(sublistcount):
-        gapInsertionSort(alist,startposition,sublistcount)
+    while gap > 0:
+        for i in range(gap, n):
+            aux = lista[i]
+            j = i
+            while j >= gap and lista[j - gap] > aux:
+                lista[j] = lista[j - gap]
+                j -= gap
+            lista[j] = aux
 
-      print("After increments of size",sublistcount,
-                                   "The list is",alist)
+        
+        print("Após incrementos de tamanho",gap," a lista é:",lista)
+        gap //= 2
 
-      sublistcount = sublistcount // 2
+    return lista
 
-def gapInsertionSort(alist,start,gap):
-    for i in range(start+gap,len(alist),gap):
-
-        currentvalue = alist[i]
-        position = i
-
-        while position>=gap and alist[position-gap]>currentvalue:
-            alist[position]=alist[position-gap]
-            position = position-gap
-
-        alist[position]=currentvalue
-
-alist = [54,26,93,17,77,31,44,55,20]
-shellSort(alist)
-print(alist)
+lista = [54,26,93,17,77,31,44,55,20]
+shell_sort(lista)
+print(lista)
 ```
 
 # 📋 Lista de Exercícios – Algoritmos de Ordenação (Insertion Sort e Shell Sort)
