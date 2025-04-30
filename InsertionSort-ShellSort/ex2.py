@@ -14,7 +14,7 @@ def insertion_sort(lista: list[tuple]) -> list[tuple]:
         insertion(lista, i)
             
     return lista
-
+ 
 pessoas = [("Robério", 21), ("joão", 30), ("Júlia", 25), ("Pedro", 28)]
 print(f"Lista desordenada: {pessoas}")
 
