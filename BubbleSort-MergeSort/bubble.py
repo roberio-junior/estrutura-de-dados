@@ -1,4 +1,17 @@
+import random
 import time
+
+def bubble_sort (lista: list[int]) -> list[int]:
+    n = len(lista)
+
+    while n > 0:
+        for i in range (0, n- 1):
+            if lista[i] > lista[i+1]:
+                aux = lista[i]
+                lista[i] = lista[i+1]
+                lista[i+1] = aux
+        n-=1
+    return lista
 
 def insertion(lista: list[int], indice: int,) -> list[int]:
     for i in range (indice, 0, - 1):
@@ -51,3 +64,4 @@ def tempo():
     print(f"Insertion Sort levou {insertion_duration:.5f} segundos.")
 
 tempo()
+
