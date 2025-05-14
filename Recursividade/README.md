@@ -34,3 +34,17 @@ Recursão é usada para resolver problemas com estrutura naturalmente recursiva,
 * **Indireta**: a função chama outra, que eventualmente chama a primeira
 
 ---
+# Lista de Exercícios
+
+## 1. Fatorial de um número
+
+Implemente uma função recursiva que calcule o fatorial de um número inteiro positivo n.
+
+## 2. Soma dos primeiros N números naturais
+Crie uma função recursiva que receba um número n e retorne a soma de todos os números de 1 até n.
+
+# 3. Fibonacci
+Implemente uma função recursiva que retorne o n -ésimo termo da sequência de Fibonacci.
+
+# 4. Potenciação
+Implemente uma função recursiva que calcule a^b , onde a é a base e b o expoente.
