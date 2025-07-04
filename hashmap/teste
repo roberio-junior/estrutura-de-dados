@@ -1,0 +1,5 @@
+contatos = {}
+nome = input("Nome do Contato:")
+numero = input("Número do contato:")
+contatos[numero] = nome
+print(contatos)
