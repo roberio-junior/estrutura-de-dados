@@ -15,6 +15,13 @@ def insertion_sort(lista: list[int]) -> list[int]:
             
     return lista
 
+
+def soma_vetores(lista: list ) -> float:
+    if len(lista) == 1:
+        return lista[0]
+    return lista[0] + soma_vetores(lista[1:])
+
+
 def mediana (lista: list[float]) -> list[float]:
     insertion_sort(lista)
     tamanho = len(lista)
@@ -23,9 +30,14 @@ def mediana (lista: list[float]) -> list[float]:
     else:
         mid = tamanho // 2
         return (lista[mid - 1] + lista[mid]) / 2
-    return print(f" Notas ordenadas: {lista}\n", f"A média da turma é:{media:.2f}")
 
-notas = [90.77, 88.52, 13.66, 33.4, 90.74]
 
-print(mediana(notas))
- 
+vetor = [6.7, 8.5, 5.4, 9.0, 7.8]
+
+resultado = soma_vetores(vetor)
+listaOrdenada = insertion_sort(vetor)
+mediana = mediana(vetor)
+
+print(f"Soma total: {resultado}.")
+print(f"Lista ordenada: {listaOrdenada}")
+print(f"Mediana: {mediana}")

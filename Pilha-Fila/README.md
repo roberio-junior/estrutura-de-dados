@@ -1,0 +1,93 @@
+## 📘 Lista de Exercícios Práticos – Implementação com Pilhas e Filas
+
+**Autoria: Keylly Santos**
+
+---
+
+## Parte 1: Pilhas
+
+### 1. 📌 Cálculo de Expressão Pós-fixa
+
+Implemente um algoritmo que leia uma expressão matemática em notação pós-fixa (ex: `"5 1 2 + 4 * + 3 -"`) e calcule seu resultado utilizando uma pilha.
+
+### 2. 📌 Simulador de Navegador com Botões Voltar e Avançar
+
+Crie um programa que simule o funcionamento do botão “voltar” e “avançar” em um navegador, usando duas pilhas para gerenciar o histórico de páginas visitadas.
+
+### 3. 📌 Verificação de Expressão Balanceada
+
+Desenvolva uma função que, utilizando uma pilha, verifique se uma expressão com parênteses, colchetes e chaves está corretamente balanceada.
+
+### 4. 📌 Inversão de String com Pilha
+
+Escreva um algoritmo que receba uma string e use uma pilha para inverter seus caracteres.
+
+### 5. 📌 Simulação de Recursão para Cálculo de Fatorial
+
+Elabore um programa que simule a execução de chamadas recursivas para o cálculo do fatorial de um número utilizando pilha, sem utilizar recursão nativa.
+
+### 6. 📌 Editor de Texto com Desfazer Ações
+
+Crie um programa que simule um editor de texto com a funcionalidade de desfazer ações. Cada ação (como escrever ou apagar) deve ser registrada em uma pilha e desfeita em ordem inversa à execução.
+
+### 7. 📌 Conversão de Expressão Infixa para Pós-fixa
+
+Desenvolva um algoritmo que converta uma expressão matemática da forma infixa (com operadores entre operandos) para a forma pós-fixa, utilizando uma pilha para controlar operadores e parênteses.
+
+### 8. 📌 Pilha com Capacidade Limitada
+
+Implemente uma estrutura de pilha com capacidade limitada. O programa deve informar quando a pilha estiver cheia ou vazia ao tentar inserir ou remover elementos.
+
+### 9. 📌 Controle de Estados em Jogos
+
+Faça um programa que armazene os estados de um jogo em uma pilha para permitir que o jogador "volte no tempo" para um estado anterior. Simule uma sequência de inserções e remoções.
+
+### 10. 📌 Verificação de Palíndromo com Pilha
+
+Elabore um algoritmo que leia uma sequência de números e use uma pilha para identificar se ela forma um palíndromo (ex: 1, 2, 3, 2, 1).
+
+---
+
+## Parte 2: Filas
+
+### 11. 📌 Fila de Atendimento em Supermercado
+
+Implemente um algoritmo que simule a fila de atendimento de um caixa de supermercado, com operações de chegada de clientes, atendimento e exibição do estado atual da fila.
+
+### 12. 📌 Fila de Impressão de Arquivos
+
+Crie um programa que simule o envio de arquivos para impressão em uma fila. Cada arquivo tem um nome e uma quantidade de páginas. A fila deve processar os arquivos por ordem de chegada.
+
+### 13. 📌 Fila Circular com Tamanho Fixo
+
+Desenvolva um programa que utilize uma fila circular com tamanho fixo. Implemente as operações de inserção e remoção, e mostre o comportamento da fila quando ela estiver cheia ou vazia.
+
+### 14. 📌 Embarque e Desembarque de Passageiros
+
+Faça um algoritmo que simule o embarque e desembarque de passageiros em um ônibus, respeitando a ordem de chegada para embarque.
+
+### 15. 📌 Fila de Requisições ao Servidor
+
+Implemente um sistema de controle de requisições a um servidor, onde cada requisição entra em uma fila e é processada na ordem de chegada.
+
+### 16. 📌 Sistema de Senhas de Banco
+
+Elabore um programa que simule a retirada e o atendimento de senhas em um banco. Cada senha deve ser chamada por ordem de chegada, com exibição da fila a cada atendimento.
+
+### 17. 📌 Busca em Largura (BFS) em Labirinto
+
+Escreva um algoritmo que simule a busca em largura (BFS) em uma matriz representando um labirinto, utilizando fila para armazenar as posições a serem exploradas.
+
+### 18. 📌 Fila de Exibição de Mensagens em Chat
+
+Desenvolva um programa para gerenciar a exibição de mensagens em um chat. Mensagens devem ser exibidas na ordem em que foram recebidas.
+
+### 19. 📌 Agendamento de Tarefas com Fila
+
+Crie um sistema de agendamento de tarefas usando uma fila. Cada tarefa tem um nome e um tempo estimado. As tarefas devem ser executadas por ordem de chegada.
+
+### 20. 📌 Comparação entre Fila e Pilha no Atendimento
+
+Implemente um algoritmo que compare o comportamento de uma fila com o de uma pilha em situações de atendimento ao público. Mostre os diferentes resultados usando os mesmos dados de entrada.
+
+
