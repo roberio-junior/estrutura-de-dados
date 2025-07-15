@@ -1,64 +1,42 @@
-class EditorTexto:
-    def __init__(self):
-        self.texto = "" # Armazena o texto atual do editor
-        self.pilha = [] # Pilha que guarda as ações para desfazer
+# Exibe o texto atual juntando as palavras com espaço
+def exibir_texto(palavras):
+    texto = " ".join(palavras)
+    print(f"Texto atual: {texto}")
 
-    def escrever(self, texto):
-        self.texto += texto # Adiciona o texto digitado ao final do texto atual
-        self.pilha.append(('escrever', texto)) # Registra a ação de escrever na pilha
+# Remove a última palavra digitada, se houver
+def desfazer(palavras):
+    if palavras:
+        palavras.pop()
+    exibir_texto(palavras)
 
-    def apagar(self, n):
-        if n > len(self.texto):
-            n = len(self.texto) # Ajusta n para não apagar mais do que o texto atual
-        apagado = self.texto[-n:] # Guarda os últimos n caracteres que serão apagados
-        self.texto = self.texto[:-n] # Remove os últimos n caracteres do texto
-        self.pilha.append(('apagar', apagado)) # Registra a ação de apagar na pilha
-
-    def desfazer(self):
-        if not self.pilha:
-            print("Nada para desfazer.") # Se não tiver ação para desfazer, avisa e sai
-            return
-        acao, valor = self.pilha.pop() # Remove a última ação da pilha para desfazer
-
-        if acao == 'escrever':
-            # Para desfazer a escrita, remove o texto que foi adicionado
-            self.texto = self.texto[:-len(valor)]
-            print(f"Desfeito: removeu '{valor}'")
-        else:  # ação 'apagar'
-            # Para desfazer o apagado, adiciona o texto de volta
-            self.texto += valor
-            print(f"Desfeito: adicionou '{valor}' de volta")
-
-    def mostrar(self):
-        print(f"\nTexto: '{self.texto}'\n")  # Mostra o texto atual
-
-
+# Menu principal do programa
 def menu():
-    editor = EditorTexto()  # Cria um editor
+    palavras = []  # Lista para armazenar as palavras digitadas
 
     while True:
-        print("1 - Escrever")
-        print("2 - Apagar")
-        print("3 - Desfazer")
-        print("4 - Mostrar texto")
-        print("0 - Sair")
-        op = input("Escolha: ")
+        print("\n╔══════════════════════════════╗")
+        print("║             MENU             ║")
+        print("╠══════════════════════════════╣")
+        print("║ 1. Digitar                   ║")
+        print("║ 2. < Desfazer                ║")
+        print("║ 0. x Sair                    ║")
+        print("╚══════════════════════════════╝")
 
-        if op == '1':
-            t = input("Texto para escrever: ")
-            editor.escrever(t)
-        elif op == '2':
-            n = int(input("Quantos caracteres apagar? "))
-            editor.apagar(n)
-        elif op == '3':
-            editor.desfazer()
-        elif op == '4':
-            editor.mostrar()
-        elif op == '0':
-            break
+        escolha = input("Escolha uma opção: ")
+
+        if escolha == "1":
+            entrada = input("Digite algo: ")
+            palavras.extend(entrada.split())  # Adiciona as palavras digitadas à lista
+            exibir_texto(palavras)
+
+        elif escolha == "2":
+            desfazer(palavras)  # Remove a última palavra
+
+        elif escolha == "0":
+            print("Encerrando Editor...")
+            break  # Encerra o programa
+
         else:
-            print("Opção inválida!")
+            print("Opção inválida. Tente novamente.")
 
-
-if __name__ == "__main__":
-    menu()
+menu()

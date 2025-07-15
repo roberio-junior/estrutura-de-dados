@@ -1,31 +1,30 @@
-from collections import deque  # deque é uma fila eficiente em Python
+from collections import deque  # Importa a estrutura deque para representar a fila
 
-class FilaLanchonete:
-    def __init__(self):
-        self.fila = deque()  # cria a fila vazia
+# Criamos a fila como uma variável global
+fila = deque()
 
-    def chegada_cliente(self, cliente):
-        self.fila.append(cliente)  # adiciona cliente no final da fila
-        print(f"Cliente {cliente} chegou à fila.")
+# Adiciona cliente ao final da fila
+def chegada_cliente(cliente):
+    fila.append(cliente)
+    print(f"Cliente {cliente} chegou à fila.")
 
-    def atender_cliente(self):
-        if not self.fila:
-            print("Fila vazia. Nenhum cliente para atender.")
-        else:
-            atendido = self.fila.popleft()  # remove cliente do início da fila
-            print(f"Cliente {atendido} foi atendido.")
+# Remove o primeiro cliente da fila
+def atender_cliente():
+    if not fila:
+        print("Fila vazia. Nenhum cliente para atender.")
+    else:
+        atendido = fila.popleft()
+        print(f"Cliente {atendido} foi atendido.")
 
-    def mostrar_fila(self):
-        if not self.fila:
-            print("A fila está vazia.")
-        else:
-            print("Fila atual:", list(self.fila))
+# Exibe todos os clientes que ainda estão na fila
+def mostrar_fila():
+    if not fila:
+        print("A fila está vazia.")
+    else:
+        print("Fila atual:", list(fila))
 
-
-# Função com menu para interagir
+# Menu de interação com o usuário
 def menu_fila():
-    fila = FilaLanchonete()
-
     while True:
         print("\nMenu da fila da lanchonete:")
         print("1 - Adicionar cliente.")
@@ -37,11 +36,11 @@ def menu_fila():
 
         if opcao == "1":
             nome = input("Nome do cliente que chegou: ")
-            fila.chegada_cliente(nome)
+            chegada_cliente(nome)
         elif opcao == "2":
-            fila.atender_cliente()
+            atender_cliente()
         elif opcao == "3":
-            fila.mostrar_fila()
+            mostrar_fila()
         elif opcao == "0":
             print("Encerrando o sistema de fila.")
             break
