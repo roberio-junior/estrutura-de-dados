@@ -22,6 +22,8 @@ Lista ordenada: ["ana", "arara", "casa", "luz", "radar"]
 Palíndromos identificados: ["ana", "arara", "radar"]
 ```
 
+👉 [Clique aqui para ver a resolução completa](https://github.com/roberio-junior/estrutura-de-dados/blob/main/avaliacoes/avaliacao-ordenacao-recursividade/questao01.py)
+
 ---
 
 ### Questão 2: Estatísticas com Recursividade
@@ -41,6 +43,8 @@ Soma total: X
 Lista ordenada: [5.4, 6.7, 7.8, 8.5, 9.0]
 Mediana: 7.8
 ```
+
+👉 [Clique aqui para ver a resolução completa](https://github.com/roberio-junior/estrutura-de-dados/blob/main/avaliacoes/avaliacao-ordenacao-recursividade/questao02.py)
 
 ---
 
@@ -62,6 +66,8 @@ Está ordenado? False
 Lista ordenada: [10, 12, 15, 20, 25]
 ```
 
+👉 [Clique aqui para ver a resolução completa](https://github.com/roberio-junior/estrutura-de-dados/blob/main/avaliacoes/avaliacao-ordenacao-recursividade/questao03.py)
+
 ---
 
 ### Questão 4: Verificação de Duplicatas e Ordenação
@@ -80,3 +86,5 @@ Depois, ordene a lista com **shell sort** e imprima os números que aparecem mai
 Lista ordenada: [1, 2, 3, 3, 5, 5, 5, 8]
 Duplicatas: 3 aparece 2x, 5 aparece 3x
 ```
+
+👉 [Clique aqui para ver a resolução completa](https://github.com/roberio-junior/estrutura-de-dados/blob/main/avaliacoes/avaliacao-ordenacao-recursividade/questao04.py)
