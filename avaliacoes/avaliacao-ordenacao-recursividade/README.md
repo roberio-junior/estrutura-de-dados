@@ -1,11 +1,8 @@
-# Ordenação e Recursividade
-
 ## Avaliação de Estrutura de Dados: Recursividade e Algoritmos de Ordenação
+
 **Keylly Santos**
 
 ---
-
-## Instruções
 
 ### Questão 1: Detectando Palíndromos com Ordenação
 Duas palavras são palíndromos se podem ser lidas da mesma forma de trás para frente.  
