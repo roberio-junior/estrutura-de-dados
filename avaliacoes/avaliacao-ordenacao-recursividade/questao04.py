@@ -16,15 +16,36 @@ def shell_sort(lista: list[int]) -> list[int]:
     return lista
 
 def encontrar_repetidos(lista: list[int]) -> list[int]:
-    repetidos = []
+    numeros_repetidos = []
+
     for i in range(len(lista) - 1):
-        if lista[i] == lista[i + 1] and lista[i] not in repetidos:
-            repetidos.append(lista[i])
-    return print(f"Elementos que aparecem mais de uma vez: {repetidos}")
+        if lista[i] == lista[i + 1] and lista[i] not in numeros_repetidos:
+            numeros_repetidos.append(lista[i])
 
-vetor = [3, 5, 2, 3, 8, 5, 1, 5]
+    return numeros_repetidos
 
-listaOrdenada = shell_sort(vetor)
-print(listaOrdenada)
-repetidos = encontrar_repetidos(vetor)
+def contar_ocorrencias(valor: int, lista: list[int]) -> int:
+    contador = 0
 
+    for elemento in lista:
+        if elemento == valor:
+            contador += 1
+
+    return contador
+
+numeros = [3, 5, 2, 3, 8, 5, 1, 5]
+
+lista_ordenada = shell_sort(numeros)
+print("Lista ordenada:", lista_ordenada)
+
+numeros_repetidos = encontrar_repetidos(lista_ordenada)
+
+mensagens = []
+
+for numero in numeros_repetidos:
+    quantidade = contar_ocorrencias(numero, lista_ordenada)
+    mensagens.append(f"{numero} aparece {quantidade}x")
+
+saida = ", ".join(mensagens)
+
+print("Duplicatas:", saida)
