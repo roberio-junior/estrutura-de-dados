@@ -3,6 +3,7 @@ def palindromo(palavra: str):
         return True
     if palavra[0] != palavra[-1]:
         return False
+    
     return palindromo(palavra[1:-1])
 
 def insertion(lista: list[int], indice: int,) -> list[int]:
@@ -22,8 +23,6 @@ def insertion_sort(lista: list[int]) -> list[int]:
             
     return lista
 
-
-
 entrada = ["ana", "casa", "arara", "luz", "radar"]
 lista_ordenada = insertion_sort(entrada)
 
@@ -31,7 +30,6 @@ palindromos = []
 for i in range (len(entrada)):
     if palindromo(entrada[i]) == True:
         palindromos.append(entrada[i])
-
 
 lista_ordenada = insertion_sort(entrada)
 
