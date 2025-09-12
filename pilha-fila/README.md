@@ -1,8 +1,67 @@
-## 📘 Lista de Exercícios Práticos – Implementação com Pilhas e Filas
+## 1. Pilhas (Stacks)
 
-**Autoria: Keylly Santos**
+### 🔹 Conceito
+
+Uma **pilha** é uma estrutura de dados do tipo **LIFO** (*Last In, First Out*), ou seja:
+➡️ o último elemento que entra é o primeiro a sair.
+
+É como uma pilha de pratos: você só consegue pegar o prato que está no topo.
+
+### 🔹 Operações principais
+
+* **push** → adiciona um elemento no topo da pilha.
+* **pop** → remove o elemento do topo da pilha.
+* **peek/top** → consulta o elemento do topo sem removê-lo.
+* **isEmpty** → verifica se a pilha está vazia.
+
+### 🔹 Exemplo visual
+
+```
+Topo -> [5]
+        [3]
+        [1] <- Base
+```
+
+* `push(7)` → empilha o 7 no topo.
+* `pop()` → retira o 5 (o último que entrou).
+* 
+### 🔹 Operações principais
+
+* **push** → adiciona um elemento no topo da pilha.
+* **pop** → remove o elemento do topo da pilha.
+* **peek/top** → consulta o elemento do topo sem removê-lo.
+* **isEmpty** → verifica se a pilha está vazia.
 
 ---
+
+## 2. Filas (Queues)
+
+### 🔹 Conceito
+
+Uma **fila** é uma estrutura de dados do tipo **FIFO** (*First In, First Out*), ou seja:
+➡️ o primeiro elemento que entra é o primeiro a sair.
+
+É como uma fila de banco ou supermercado: quem chega primeiro é atendido primeiro.
+
+### 🔹 Operações principais
+
+* **enqueue** → adiciona um elemento no fim da fila.
+* **dequeue** → remove o elemento do início da fila.
+* **peek/front** → consulta o elemento da frente sem removê-lo.
+* **isEmpty** → verifica se a fila está vazia.
+
+### 🔹 Exemplo visual
+
+```
+Frente -> [1] [3] [5] <- Traseira
+```
+
+* `enqueue(7)` → entra na traseira, fica: `[1] [3] [5] [7]`.
+* `dequeue()` → remove o 1 (o primeiro que entrou).
+
+---
+
+## 📘 Lista de Exercícios Práticos – Implementação com Pilhas e Filas
 
 ## Parte 1: Pilhas
 
